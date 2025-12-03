@@ -1,0 +1,46 @@
+{
+  "name": "tech-test-backend-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint --ext .js,.html -f ./node_modules/eslint-friendly-formatter . --fix",
+    "prepush": "npm run lint",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkswilliam2009/tech-test-backend-node.git"
+  },
+  "keywords": [
+	"node.js",
+    "javascript",
+    "postgresel",
+    "azure",
+    "serverless",
+    "azure-functions",
+    "azure-devops",
+    "azure-storage",
+    "github-actions",
+    "app-service",
+    "express"
+	],
+  "author": "Lokius William Tanikwele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lkswilliam2009/tech-test-backend-node/issues"
+  },
+  "homepage": "https://github.com/lkswilliam2009/tech-test-backend-node#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1",
+    "express-promise-router": "^4.1.1",
+    "pg": "^8.16.3"
+  }
+}
