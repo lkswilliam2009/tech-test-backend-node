@@ -37,3 +37,27 @@ exports.createMember = async (req, res) => {
         res.status(500).json({ message: 'Failed to create member.', error: err.message });
     }
 };
+
+exports.getMemberHistory = async (req, res) => {
+	const { id } = req.params;
+	
+    if (!id) {
+        return res.status(400).json({ message: 'Failed to get member history.',error: 'Member ID is required.' });
+    }
+	
+	try {
+		const { status, page = 1, limit = 10 } = req.query;
+
+		const parsedPage = parseInt(page);
+		const parsedLimit = parseInt(limit);
+
+		if (isNaN(parsedPage) || parsedPage < 1 || isNaN(parsedLimit) || parsedLimit < 1) {
+			return res.status(400).json({ message: 'Invalid page or limit parameters.' });
+		}
+
+		const itemsData = await membersModel.findMemberHistory(id, status, parsedPage, parsedLimit);
+		res.status(200).json(itemsData);
+	} catch (error) {
+		res.status(500).json({ message: 'Server error', error: error.message });
+	}
+};

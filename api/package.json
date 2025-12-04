@@ -14,7 +14,7 @@
     "url": "git+https://github.com/lkswilliam2009/tech-test-backend-node.git"
   },
   "keywords": [
-	"node.js",
+    "node.js",
     "javascript",
     "postgresel",
     "azure",
@@ -24,8 +24,9 @@
     "azure-storage",
     "github-actions",
     "app-service",
-    "express"
-	],
+    "express",
+    "knex"
+  ],
   "author": "Lokius William Tanikwele",
   "license": "ISC",
   "bugs": {
@@ -41,6 +42,7 @@
     "dotenv": "^17.2.3",
     "express": "^4.22.1",
     "express-promise-router": "^4.1.1",
+    "knex": "^3.1.0",
     "pg": "^8.16.3"
   }
 }

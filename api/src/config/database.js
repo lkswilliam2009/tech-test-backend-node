@@ -1,4 +1,5 @@
 const { Pool } = require('pg');
+const knex = require('knex')(require('./knexfile'));
 const dotenv = require('dotenv');
 
 dotenv.config({ debug: true });
@@ -12,5 +13,5 @@ pool.on('connect', () => {
 });
 
 module.exports = {
-  query: (text, params) => pool.query(text, params),
+  query: (text, params) => pool.query(text, params), knex
 };

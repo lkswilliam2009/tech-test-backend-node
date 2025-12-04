@@ -3,8 +3,8 @@ const db = require("../config/database");
 class Books {
 	static async findListBooks(title, author, page, limit) {
 		const offset = (page - 1) * limit;
-		const searchTerm = `%${title}%`; // For case-insensitive partial matching
-		const searchTerm_2 = `%${author}%`; // For case-insensitive partial matching
+		const searchTerm = `%${title}%`;
+		const searchTerm_2 = `%${author}%`;
 
 		const query = 'SELECT * FROM books WHERE title ILIKE $1 OR author ILIKE $2 ORDER BY title ASC LIMIT $3 OFFSET $4';
 		const countQuery = 'SELECT COUNT(*) FROM books WHERE title ILIKE $1 OR author ILIKE $2';
