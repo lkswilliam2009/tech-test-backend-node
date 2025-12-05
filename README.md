@@ -1,7 +1,11 @@
 
 # API Backend Node.js using Express Framework
 
+
 Created By Lokius William T
+## Break for Coffee Time
+
+Please make sure you're already install **Node.js v.18.8.0** to use following **npm** command and **PostgreSQL** in your machine.
 
 
 
