@@ -5,7 +5,7 @@
 Created By Lokius William T
 ## Break for Coffee Time
 
-Please make sure you're already install **Node.js v.18.8.0** to use following **npm** command and **PostgreSQL** in your machine. Then execute dump public.sql into your **PostgreSQL** database to store the table, view and data. 
+Please make sure you're already install **Node.js v.18.8.0** to use following **npm** command and **PostgreSQL** in your machine.
 
 
 
@@ -27,8 +27,9 @@ Install dependencies
 ```bash
   cd tech-test-backend-node/api
 ```
+
 ```bash
-  npm install
+  npm install 
 ```
 
 Start the server
@@ -49,11 +50,15 @@ To run this project, you will need to add the following environment variables to
 
 ## API Reference
 
-#### Connected to Swagger API Documentation
+#### Open Swagger API Documentation
 
 ```http
   http://localhost:5017/api-docs
 ```
 
+              
 
+
+
+![Swagger](Swagger.PNG)
 
